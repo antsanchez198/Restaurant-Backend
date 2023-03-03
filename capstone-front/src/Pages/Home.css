@@ -1,0 +1,15 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --mex-red: #AD4132;
+    --text-wcolor: white;
+}
+
+header {
+    background: var(--mex-red);
+    color: var(--text-wcolor);
+}
