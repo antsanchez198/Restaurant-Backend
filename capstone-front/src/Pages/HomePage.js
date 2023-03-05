@@ -30,7 +30,7 @@ export default function HomePage() {
 
       <body>
         <section className="preview">
-          <h2>Serving Authentic Mexican Food in Brooklyn for over 20 Years</h2>
+          <div className="blur"><h2>Serving Authentic Mexican Food in Brooklyn for over 20 Years</h2></div>
         </section>
 
         <section className="bio">
