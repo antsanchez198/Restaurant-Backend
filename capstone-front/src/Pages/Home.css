@@ -79,7 +79,8 @@ header h1 {
 .preview h2 {
     font-size: 5rem;
     text-align: center;
-    padding: 2rem;
+    padding: 4rem;
+    font-family: 'Vidaloka', serif;
 }
 
 .blur {
@@ -106,13 +107,15 @@ header h1 {
 .bio-para-container h4 {
     font-size: 2.5rem;
     text-align: center;
-    color: var(--mex-red);
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
 }
 
 .bio-para-container img {
     max-width: 35rem;
     max-height: 35rem;
-    box-shadow: rgb(30, 30, 30) 10px 10px;
+    box-shadow: var(--mex-red) 10px 10px;
 }
 
 .images-section {

@@ -30,7 +30,7 @@ export default function HomePage() {
 
       <body>
         <section className="preview">
-          <div className="blur"><h2>Serving Authentic Mexican Food in Brooklyn for over 20 Years</h2></div>
+          <div className="blur"><h2>Serving Authentic Mexican Food for over <strong>20 Years</strong></h2></div>
         </section>
 
         <section className="bio">
@@ -40,7 +40,7 @@ export default function HomePage() {
           </div>
           <div className="bio-para-container">
             <img src={fajitas} alt="fajitas"></img>
-            <h4 className="para-last">Live Mariachis Every Friday from 8pm to 11pm</h4>
+            <h4 className="para-last">Comforting Food and Drinks inspired from Puebla</h4>
           </div>
         </section>
 
