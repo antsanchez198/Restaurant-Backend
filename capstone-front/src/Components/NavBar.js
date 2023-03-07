@@ -10,6 +10,7 @@ export default function NavBar (props) {
             {/* <li><a className="navItems">Home</a></li> */}
             <Link to = "/home" className="navItems"> Home </Link>
             <Link to = "/menu" className="navItems"> Menu </Link>
+            <Link to = "/order" className="navItems"> Order </Link>
             <Link to = "/contact" className="navItems"> Contact Us </Link>
             {
                 !isLogin?  <Link to = "/account" className="navItems"> Account </Link> : 

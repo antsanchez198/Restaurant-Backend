@@ -11,6 +11,7 @@
     --text-wcolor: white;
     --cream: #FEFBEA;
     --dark-cream: #d8d2b4;
+    --semi-dark-cream: #edead9;
 }
 
 body {
@@ -61,7 +62,16 @@ header h1 {
     border: 0.20rem solid white;
 }
 
+.transition {
+    -webkit-transition: ease-in-out .7s;
+    -moz-transition: ease-in-out .7s;
+    transition: ease-in-out .7s;
+}
 
+.button-container button:hover {
+    color: #AD4132;
+    box-shadow: inset 400px 0 0 0 white;
+}
 
 .preview {
     background: url("../images/tinga.JPG");
@@ -89,13 +99,14 @@ span {
 } */
 
 .blur {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     min-height: 700px;
     justify-content: center;
     align-items: center;
     display: flex;
 }
-.bio {
+
+.bio-section {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -103,38 +114,56 @@ span {
     padding: 3rem 0;
 }
 
-.bio-para-container {
+.bio-section-container {
     display: flex;
     gap: 5rem;
     justify-content: center;
-    font-family:Verdana, sans-serif;
+    font-family: Verdana, sans-serif;
     align-items: center;
     font-size: 1rem;
     color: rgb(47, 44, 44);
 }
 
-.bio-para-container p,
-.bio-para-container img {
+.bio-section-container p,
+.bio-section-container img {
     flex: 1;
 }
 
-.bio-para-container h4 {
+.bio-section-container h5 {
     text-align: center;
     color: black;
     font-weight: 300;
-} 
+}
 
-.bio-para-container p {
+.bio-section-container p {
     font-size: 3rem;
 }
 
-.bio-para-container img {
+.bio-section-container img {
     max-width: 35rem;
     max-height: 35rem;
     box-shadow: var(--mex-red) 10px 10px;
 }
 
-.paragraph strong{
+.bio-paragraph button {
+    margin-top: 2rem;
+    background: var(--semi-dark-cream);
+    color: var(--mex-red);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.bio-paragraph button:hover {
+    color: white;
+    box-shadow: inset 400px 0 0 0 var(--mex-red);
+}
+
+svg {
+    margin-left: 0.40rem;
+    margin-bottom: .25rem;
+}
+
+.paragraph strong {
     font-family: 'Tilt Warp', cursive;
     font-size: 4rem;
     display: block;
@@ -169,9 +198,15 @@ span {
     gap: .20rem;
 }
 
+
 .image-container img {
     display: flex;
     object-fit: cover;
+    transition: 0.5s all ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(.97);
 }
 
 .box {
@@ -204,7 +239,7 @@ span {
 
 .cc-inner-left {
     line-height: 0.5rem;
-    background-color: var(--dark-cream);
+    background-color: var(--semi-dark-cream);
     border-radius: 1rem;
     padding: 2rem 3rem;
 }
@@ -232,8 +267,8 @@ span {
 }
 
 .cc-inner-left img {
-   width: 2.5rem;
-   height: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .line {
@@ -243,4 +278,3 @@ span {
     width: 100%;
     border-radius: 0.25rem;
 }
-
