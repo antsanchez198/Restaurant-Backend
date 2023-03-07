@@ -10,7 +10,7 @@
     --mex-red: #AD4132;
     --text-wcolor: white;
     --cream: #FEFBEA;
-    --dark-cream: #cbc8b9;
+    --dark-cream: #d8d2b4;
 }
 
 body {
@@ -61,10 +61,7 @@ header h1 {
     border: 0.20rem solid white;
 }
 
-.bio {
-    text-align: center;
-    margin: 5rem;
-}
+
 
 .preview {
     background: url("../images/tinga.JPG");
@@ -76,12 +73,20 @@ header h1 {
     color: white;
 }
 
-.preview h2 {
-    font-size: 5rem;
+.preview h3 {
+    font-size: 4rem;
     text-align: center;
     padding: 4rem;
     font-family: 'Vidaloka', serif;
 }
+
+span {
+    display: block;
+}
+
+/* .preview strong {
+    color: rgb(12, 12, 236);
+} */
 
 .blur {
     background: rgba(0,0,0,0.5);
@@ -90,13 +95,22 @@ header h1 {
     align-items: center;
     display: flex;
 }
+.bio {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0;
+}
 
 .bio-para-container {
     display: flex;
-    margin-top: 5rem;
-    gap: 10rem;
+    gap: 5rem;
     justify-content: center;
+    font-family:Verdana, sans-serif;
     align-items: center;
+    font-size: 1rem;
+    color: rgb(47, 44, 44);
 }
 
 .bio-para-container p,
@@ -105,11 +119,13 @@ header h1 {
 }
 
 .bio-para-container h4 {
-    font-size: 2.5rem;
     text-align: center;
     color: black;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
+    font-weight: 300;
+} 
+
+.bio-para-container p {
+    font-size: 3rem;
 }
 
 .bio-para-container img {
@@ -118,29 +134,113 @@ header h1 {
     box-shadow: var(--mex-red) 10px 10px;
 }
 
+.paragraph strong{
+    font-family: 'Tilt Warp', cursive;
+    font-size: 4rem;
+    display: block;
+    color: var(--mex-red);
+}
+
 .images-section {
     background: var(--mex-red);
     text-align: center;
-    padding: 2rem 5rem;
+    padding: 4.5rem 0;
     color: white;
+    background: url("../images/background6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .images-section h2 {
-    font-size: 5rem;
+    margin: 0 auto;
+    max-width: 100%;
+    font-size: 4rem;
+    font-family: 'Vidaloka', serif;
+    letter-spacing: 0.25rem
 }
 
 .image-container {
     display: flex;
-    gap: 1rem;
     max-width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2rem;
+    margin: 2rem 0;
+    gap: .20rem;
 }
 
 .image-container img {
     display: flex;
-    width: 23rem;
-    height: 23rem;
     object-fit: cover;
 }
+
+.box {
+    width: 18rem;
+    height: 18rem;
+}
+
+.rectangle {
+    height: 18rem;
+    width: auto;
+}
+
+.contact-section {
+    background: url("../images/tacos2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.contact-container {
+    max-width: 200rem;
+    max-height: 100%;
+    margin: 0 auto;
+    background: var(--cream);
+    display: flex;
+    border-radius: 1rem;
+}
+
+.cc-inner-left {
+    line-height: 0.5rem;
+    background-color: var(--dark-cream);
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+}
+
+
+.cc-inner-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.cc-inner-info {
+    margin-top: 1rem;
+}
+
+.cc-inner-info h3 {
+    margin-top: 1rem;
+}
+
+.cc-inner-left h1 {
+    font-family: 'Tilt Warp', cursive;
+    color: #AD4132;
+    text-align: center;
+}
+
+.cc-inner-left img {
+   width: 2.5rem;
+   height: 2.5rem;
+}
+
+.line {
+    height: 0.10rem;
+    /* background-color: #9e9591; */
+    background-color: var(--mex-red);
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
