@@ -7,6 +7,7 @@ import AccountPage from "./Pages/AccountPage";
 import { useState, useEffect } from "react/cjs/react.development";
 import Profile from "./Pages/Profile";
 import MenuPage from "./Pages/MenuPage";
+import OrderPage from "./Pages/OrderPage";
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -37,7 +38,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<HomePage />} />
           <Route path="/menu" element={<MenuPage />} />
-          <Route path="/contact" element={<MenuPage />} />
+          <Route path="/order" element={<OrderPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route
             path="/account"

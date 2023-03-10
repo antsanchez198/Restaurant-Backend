@@ -5,8 +5,6 @@ import Home from "./Home.css";
 import fajitas from "../images/fajitas.JPG";
 import burrito from "../images/burrito.JPG";
 import chile from "../images/chile.JPG";
-import pasta from "../images/pasta.JPG";
-import interior1 from "../images/interior1.jpg";
 import interior2 from "../images/interior2.jpg";
 import tacos from "../images/tacos.jpg";
 import tacos2 from "../images/tacos2.jpg";
@@ -14,10 +12,8 @@ import tinga from "../images/tinga.JPG";
 import exterior from "../images/exterior.JPG";
 import mariachis_playing from "../images/mariachis_playing.jpg";
 import instagram from "../images/instagram.png";
-import location from "../images/location_icon.png";
-import restaurant from "../images/restaurant.png";
-
 import { Link } from "react-router-dom"
+import { HashLink } from 'react-router-hash-link';
 
 export default function HomePage() {
 
@@ -27,8 +23,8 @@ export default function HomePage() {
         <div className="left">
           <h1><strong>Los Mariachis Mexican Restaurant</strong></h1>
           <div className="button-container">
-            <Link to="/menu"><button className="btn-lg transition">Order Online</button></Link>
-            <Link to="/order"><button className="btn-lg transition">See the Menu</button></Link>
+            <Link to="/order"><button className="btn-lg transition">Order Online</button></Link>
+            <Link to="/menu"><button className="btn-lg transition">See the Menu</button></Link>
           </div>
         </div>
         <div className="right">
@@ -45,20 +41,21 @@ export default function HomePage() {
           <div className="bio-section-container">
             <div className="bio-paragraph">
               <h5 className="paragraph"><strong>Live Mariachis</strong> every Friday from 8pm to 11pm</h5>
-              <Link to="/menu"><button className="btn-lg transition">
+              <HashLink to="/home/#contact"
+              ><button className="btn-lg transition">
                 Visit Us
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" stroke-width="0" fill="currentColor"></path>
                 </svg>
-              </button></Link>
+              </button></HashLink>
             </div>
             <img src={mariachis_playing}></img>
           </div>
           <div className="bio-section-container">
             <img src={fajitas} alt="fajitas"></img>
             <div className="bio-paragraph">
-              <h5 className="paragraph"><strong>Comforting Food</strong>inspired from Puebla, Mexico</h5>
+              <h5 className="paragraph"><strong>Comforting Food</strong>with recipes from Puebla, Mexico</h5>
               <Link to="/menu"><button className="btn-lg transition">See Menu
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -81,8 +78,8 @@ export default function HomePage() {
         </section>
       </body>
 
-      <footer>
-        <section className="contact-section">
+      <footer id="contact">
+        <section className="contact-section" >
           <div className="blur">
             <div className="contact-container">
               <div className="cc-inner-left">
@@ -104,7 +101,7 @@ export default function HomePage() {
                   <p>718-826-3388</p>
                   <div className="line"></div>
                   <h3>Social Media</h3>
-                  <a href="https://instagram.com/losmariachisrestaurant_?igshid=YmMyMTA2M2Y=" title="@losmariachisrestaurant_"><img src={instagram}></img></a>
+                  <a href="https://instagram.com/losmariachisrestaurant_?igshid=YmMyMTA2M2Y=" title="@losmariachisrestaurant_" target="_blank"><img src={instagram}></img></a>
                 </div>
               </div>
               <div className="cc-inner-right">

@@ -15,7 +15,8 @@
 }
 
 body {
-    background-color: var(--cream);
+    background-color: white;
+    overflow: auto;
 }
 
 header {
@@ -107,6 +108,7 @@ span {
 }
 
 .bio-section {
+    background-color: var(--cream);
     text-align: center;
     display: flex;
     flex-direction: column;

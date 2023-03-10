@@ -1,3 +1,7 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +9,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --mex-red: #AD4132;
+  --text-wcolor: white;
+  --cream: #FEFBEA;
+  --dark-cream: #d8d2b4;
+  --semi-dark-cream: #edead9;
 }
 
 code {
@@ -70,6 +82,17 @@ code {
   border-radius: 10px;
 }
 
+/* navbar */
+.navBox {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2e2c2c;
+  font-weight: bold;
+  font-size: 17px;
+}
+
 .navItems {
   display: block;
   color: white;
@@ -79,43 +102,57 @@ code {
   float: left;
 }
 
-.navCart{
-  float: right;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.navItems:hover {
+  background-color: rgb(108, 104, 104);
+  color: whitesmoke;
 }
 
-.navBox {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+.right{
+  float: right;
 }
 
 .cardBtn {
   float: right;
 }
+/* navbar */
 
-.form {
-  background: url("https://www.italian-feelings.com/wp-content/uploads/2017/03/japanese-food-940x625.jpg");
-  background-size: cover;
+/* Account Page */
+.form-section {
+  background: whitesmoke;
+  height: 91.1vh;
+  display: flex;
 }
 
-.formContainer{
-  background-color: #f2f2f2;
-  height: 100vh;
-  width: 50%;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.flex {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 2px 16px;
+}
+
+.form-container{
+  background-color: #f2f2f2;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  flex-basis: 70%;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-section img {
+  height: auto;
+  width: auto;
+  flex-basis: 30%;
+}
+
+.fc-header {
+  text-align: center;
+}
+
+.container {
+
 }
 
 .inputBox{
-  width: 100%;
+  width: 60%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
