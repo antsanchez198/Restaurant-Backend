@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import MenuItems from "./MenuItems";
+import styles from "../Pages/OrderPage.css"
 
 export default function MenuCard({ item }) {
     let [inCart, setInCart] = useState();

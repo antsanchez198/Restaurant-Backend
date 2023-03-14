@@ -3,7 +3,7 @@ import React from "react";
 import MenuItems from "../Components/MenuItems";
 import SideMenu from "../Components/SideMenu";
 import { useState, useEffect } from "react";
-
+import styles from "./OrderPage.css";
 
 export default function OrderPage() {
 
@@ -29,7 +29,7 @@ export default function OrderPage() {
 
 
   return (
-    <div className="width">
+    <div className="order-page container">
       <SideMenu  allFoods = {foodItems} setType = {setType}/>
       <MenuItems allFoods = {foodItems} />
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import illustration from "../images/cafe.png";
+import styles from "./AccountPage.css";
 
 export default function AccountPage(props) {
 
