@@ -43,11 +43,11 @@ code {
 }
 
 /* the card container */
-.container {
+/* .container {
   padding: 20px;
   height: 100px;
   align-items: center;
-}
+} */
 
 .itemsContainer {
   max-width: max-content;
@@ -100,11 +100,37 @@ code {
   padding: 14px 16px;
   text-decoration: none;
   float: left;
+  /* background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 90%,
+    hotpink 90%,
+    hotpink 100%
+  ); 
+
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+
+  transition: background-size 300ms; */
 }
 
 .navItems:hover {
   background-color: rgb(108, 104, 104);
   color: whitesmoke;
+  /* background-size: 100% 100%;
+  background-position-x: left; */
+  /* color: white;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 90%,
+    var(--mex-red) 90%,
+    var(--mex-red) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center; */
 }
 
 .right{
@@ -129,12 +155,21 @@ code {
   align-items: center;
 }
 
+.column {
+  flex-direction: column;
+}
+
 .form-container{
   background-color: #f2f2f2;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   flex-basis: 70%;
-  flex-direction: column;
   gap: 1rem;
+}
+
+.form-container button {
+  width: 20%;
+  border-radius: 25rem;
+  font-weight: 600;
 }
 
 .form-section img {
@@ -147,18 +182,23 @@ code {
   text-align: center;
 }
 
-.container {
+.fc-header a {
+  cursor: pointer;
+  margin-left: 0.25rem;
+}
 
+.fc-body {
+  margin: 1.5rem 0;
+  gap: 0.5rem;
+  width: 50%;
 }
 
 .inputBox{
-  width: 60%;
+  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;}
+}
 
   .registerHere{
     text-decoration: underline;

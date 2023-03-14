@@ -5,14 +5,10 @@ export default function AccountPage(props) {
 
     const setIsLogin = props.setIsLogin;
 
-    const [isRegistered, setIsRegistered] = useState(false)
+    const [hasAccount, setHasAccount] = useState(true)
     const [u_email, setEmail] = useState("")
     const [u_password, setPassword] = useState("")
     const [u_name, setName] = useState("")
-    function registerUser() {
-        setIsRegistered(true)
-        document.getElementById("showRegister").style.display = "inline";
-    }
 
     const onchangeEmail = (e) => {
 
@@ -86,7 +82,7 @@ export default function AccountPage(props) {
     };
 
     function signIn() {
-        if (!isRegistered) {
+        if (!hasAccount) {
 
             if ([u_email, u_password].every(Boolean)) {
                 LoginAPI()
@@ -107,28 +103,18 @@ export default function AccountPage(props) {
 
     return (
         <div className="form-section">
-            <div className="form-container flex">
+            <div className="form-container flex column">
                 <div className='fc-header'>
-                    <h2>Login</h2>
-                    <h5>Don't Have an Account?<a className="registerHere" onClick={registerUser}>Sign Up Here</a></h5>
+                    <h1>Login</h1>
+                    {hasAccount ? <h6>Don't Have an Account? <a className="registerHere" onClick={() => setHasAccount(!hasAccount)}>Sign Up</a></h6> : <h6>Already have an Account?<a className="registerHere" onClick={() => setHasAccount(!hasAccount)}>Log In</a></h6>}
                 </div>
 
-                <div id="showRegister" style={{ display: "none" }}>
-                    <label>Name</label>
-                    <input placeholder="Name" className="inputBox" onChange={onchangeName}></input>
+                <div className='fc-body flex column'>
+                        {hasAccount ? <></> : <input placeholder="Name" className="inputBox" onChange={onchangeName}></input>}
+                        <input placeholder="Email" className="inputBox" onChange={onchangeEmail}></input>
+                        <input type="password" placeholder="Password" className="inputBox" onChange={onchangePassword}></input>
                 </div>
-
-                <div className="container flex">
-                    <h5>Email:</h5>
-                    <input placeholder="Email" className="inputBox" onChange={onchangeEmail}></input>
-                </div>
-
-                <div className="container flex">
-                    <h5>Password:</h5>
-                    <input type="password" placeholder="Password" className="inputBox" onChange={onchangePassword}></input>
-                </div>
-
-                <button className="btn btn-warning" onClick={signIn}>{!isRegistered ? "Sign In" : "Register"}</button>
+                <button className="btn btn-warning" onClick={signIn}>{hasAccount ? "Sign In" : "Register"}</button>
             </div>
             <img src={illustration} alt="My Happy SVG" />
         </div >
