@@ -72,7 +72,24 @@ header h1 {
 .button-container button:hover {
     color: #AD4132;
     box-shadow: inset 400px 0 0 0 white;
+    cursor:pointer;
 }
+
+/* temp */
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Style the active class, and buttons on mouse-over */
+  .active, .btn:hover {
+    background-color: #666;
+    color: white;
+  }
 
 .preview {
     background: url("../images/tinga.JPG");
@@ -89,6 +106,7 @@ header h1 {
     text-align: center;
     padding: 4rem;
     font-family: 'Vidaloka', serif;
+    width: 100%;
 }
 
 span {
@@ -105,6 +123,15 @@ span {
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+}
+
+.container p {
+    flex-basis: 1;
 }
 
 .bio-section {

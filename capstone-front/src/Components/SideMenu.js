@@ -17,28 +17,17 @@ export default function SideMenu(props) {
 
     return (
         <div className="sideMenu">
-            {/* <div class="d-flex align-items-start ">
-                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-
-                    {categories.map(index => {
-                        //const currentCat = index.f_category;
-                        return (
-                            <button class="nav-link" data-bs-toggle="pill" onClick={() => setType(index)}>{index}</button>
-                        )
-                    })}
-                </div>
-            </div> */}
-
             <div class="dropdown">
-                <button class="dropbtn">All Foods
-                    <i class="fa fa-caret-down"></i>
+                {props.foodType == "" ? <button class="dropbtn"> All Foods
+                <i class="bi bi-chevron-down"></i>
                 </button>
+                    :
+                    <button class="dropbtn"> {props.foodType}
+                        <i class="bi bi-chevron-down"></i>
+                    </button>}
                 <div class="dropdown-content">
-                    {/* <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a> */}
+                    <a onClick={() => setType("")}>All Foods</a>
                     {categories.map(index => {
-                        //const currentCat = index.f_category;
                         return (
                             <a onClick={() => setType(index)}>{index}</a>
                         )

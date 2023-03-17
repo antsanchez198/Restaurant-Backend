@@ -38,6 +38,9 @@ code {
   background-color: #2e2c2c;
   font-weight: bold;
   font-size: 17px;
+  /* position: sticky;
+  top: 0; */
+  z-index: 2;
 }
 
 .navItems {
@@ -58,6 +61,7 @@ code {
   float: right;
 }
 
-.cardBtn {
-  float: right;
+.active {
+  background-color: rgb(108, 104, 104);
+  color: whitesmoke;
 }

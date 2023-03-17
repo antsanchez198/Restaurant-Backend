@@ -6,16 +6,12 @@ import styles from "../Pages/OrderPage.css"
 export default function MenuItems({allFoods}) {
 
     return(
-        // formats the grid
-        <div className="gridContainer"> 
-        <div className="itemsContainer">
+        <div class="grid-container grid-container--fill">
         {allFoods.map(index => {
-            {/* formats the container */}
             return(
                 <MenuCard item = {index}/>
             )
             })}
-        </div>
         </div>
     );
 }

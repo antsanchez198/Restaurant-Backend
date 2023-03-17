@@ -1,33 +1,59 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --mex-red: #AD4132;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    height: 250px;
-    width: 250px;
+    height: 100%;
+    padding: 1rem 0;
+    border-radius: 0;
 }
 
 /* add a deeper shadow */
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border: black .08rem solid;
 }
 
-/* the card container */
-/* .container {
-    padding: 20px;
-    height: 100px;
-    align-items: center;
-  } */
+.cardItem {
+    line-height: 1rem;
+}
+
+.cardBtn {
+    float: right;
+    border-radius: 0;
+}
 
 .order-page {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    gap: 1rem;
 }
 
 .itemsContainer {
     max-width: max-content;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) );;
+    gap: 0rem;
 }
 
+.grid-container {
+    display: grid;
+}
+
+.grid-container--fill {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 1rem;
+}
 
 .cardItem {
     padding: 5px;
@@ -35,7 +61,6 @@
 
 .inner {
     display: inline-block;
-    color: green;
     font-style: normal;
     font-weight: bold;
 }
@@ -43,11 +68,6 @@
 .gridContainer {
     display: inline-block;
     padding: 20px;
-}
-
-.sideMenu {
-    padding: 20px;
-    border-radius: 10px;
 }
 
 .dropdown {
@@ -65,10 +85,6 @@
     margin: 0;
     font-weight: 650;
     width: 100%;
-}
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
 }
 
 .dropdown-content {
@@ -93,6 +109,10 @@
     background-color: #ddd;
     cursor: pointer;
     font-weight: 650;
+}
+
+.dropbtn i {
+    float: right;
 }
 
 .dropdown:hover .dropdown-content {

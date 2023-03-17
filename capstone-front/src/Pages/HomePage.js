@@ -34,7 +34,13 @@ export default function HomePage() {
 
       <body>
         <section className="preview">
-          <div className="blur"><h3>Serving Authentic Mexican Food <span>for over <strong>20 Years</strong></span></h3></div>
+          <div className="blur">
+            <h3>Serving Authentic Mexican Food <span>for over <strong>20 Years</strong></span></h3>
+            <div className="container">
+              <p>Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
+              <p>Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
+            </div>
+          </div>
         </section>
 
         <section className="bio-section">
