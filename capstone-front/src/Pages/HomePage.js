@@ -19,10 +19,26 @@ export default function HomePage() {
 
   useEffect(() => {
     const slideElements = document.querySelectorAll('.hidden');
+    console.log(slideElements)
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        entry.target.classList.toggle("show", entry.isIntersecting)
+        if (entry.target.className.includes("rectangle") || entry.target.className.includes("box")) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show")
+          }
+          else {
+            entry.target.classList.remove("show")
+          }
+        }
+        else {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("slide-show")
+          }
+          else {
+            entry.target.classList.remove("slide-show")
+          }
+        }
       })
     })
 
@@ -51,8 +67,8 @@ export default function HomePage() {
           <div className="blur">
             <h3>Serving Authentic Mexican Food <span>for over <strong>20 Years</strong></span></h3>
             <div className="container">
-              <p>Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
-              <p>Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
+              <p class="hidden">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
+              <p class="hidden">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
             </div>
           </div>
         </section>
@@ -71,10 +87,10 @@ export default function HomePage() {
                   </svg>
                 </button></HashLink>
             </div>
-            <img src={mariachis_playing} class="hidden"></img>
+            <img src={mariachis_playing} class="slide hidden from-right"></img>
           </div>
           <div className="bio-section-container">
-            <img src={fajitas} alt="fajitas"></img>
+            <img src={fajitas} alt="fajitas" class="slide hidden from-left"></img>
             <div className="bio-paragraph">
               <h5 className="paragraph"><strong>Comforting Food</strong></h5>
               <p>with recipes from Puebla, Mexico</p>
