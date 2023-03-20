@@ -132,6 +132,7 @@ span {
 
 .container p {
     flex-basis: 1;
+    font-family: 'Poppins';
 }
 
 .bio-section {
@@ -147,9 +148,9 @@ span {
     display: flex;
     gap: 5rem;
     justify-content: center;
-    font-family: Verdana, sans-serif;
     align-items: center;
     font-size: 1rem;
+    font-family: 'Poppins';
     color: rgb(47, 44, 44);
 }
 
@@ -162,10 +163,13 @@ span {
     text-align: center;
     color: black;
     font-weight: 300;
+    margin: 0;
 }
 
 .bio-section-container p {
-    font-size: 3rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0;
 }
 
 .bio-section-container img {
@@ -301,9 +305,37 @@ svg {
 }
 
 .line {
-    height: 0.10rem;
+    height: 0.12rem;
     /* background-color: #9e9591; */
     background-color: var(--mex-red);
     width: 100%;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
 }
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+.rectangle:nth-child(1){
+    transition-delay: 200ms;
+}
+
+.rectangle:nth-child(2){
+    transition-delay: 400ms;
+}
+
+.rectangle:nth-child(3){
+    transition-delay: 600ms;
+}
+
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+  }

@@ -17,6 +17,20 @@ import { HashLink } from 'react-router-hash-link';
 
 export default function HomePage() {
 
+  useEffect(() => {
+    const slideElements = document.querySelectorAll('.hidden');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+      })
+    })
+
+    slideElements.forEach(element => {
+      observer.observe(element)
+    })
+  });
+
   return (
     <>
       <header>
@@ -46,22 +60,24 @@ export default function HomePage() {
         <section className="bio-section">
           <div className="bio-section-container">
             <div className="bio-paragraph">
-              <h5 className="paragraph"><strong>Live Mariachis</strong> every Friday from 8pm to 11pm</h5>
+              <h5 className="paragraph"><strong>Live Mariachis</strong></h5>
+              <p>every Friday from 8pm to 11pm</p>
               <HashLink to="/home/#contact"
               ><button className="btn-lg transition">
-                Visit Us
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" stroke-width="0" fill="currentColor"></path>
-                </svg>
-              </button></HashLink>
+                  Visit Us
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6z" stroke-width="0" fill="currentColor"></path>
+                  </svg>
+                </button></HashLink>
             </div>
-            <img src={mariachis_playing}></img>
+            <img src={mariachis_playing} class="hidden"></img>
           </div>
           <div className="bio-section-container">
             <img src={fajitas} alt="fajitas"></img>
             <div className="bio-paragraph">
-              <h5 className="paragraph"><strong>Comforting Food</strong>with recipes from Puebla, Mexico</h5>
+              <h5 className="paragraph"><strong>Comforting Food</strong></h5>
+              <p>with recipes from Puebla, Mexico</p>
               <Link to="/menu"><button className="btn-lg transition">See Menu
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -74,12 +90,12 @@ export default function HomePage() {
         <section className="images-section">
           <h2><strong>Gallery</strong></h2>
           <div className="image-container">
-            <img src={tacos} className="rectangle"></img>
-            <img src={interior2} className="rectangle" ></img>
-            <img src={tinga} className="rectangle"></img>
-            <img src={burrito} className="rectangle"></img>
-            <img src={chile} className="box"></img>
-            <img src={tacos2} className="rectangle"></img>
+            <img src={tacos} class="rectangle hidden"></img>
+            <img src={interior2} class="rectangle hidden" ></img>
+            <img src={tinga} class="rectangle hidden"></img>
+            <img src={burrito} class="rectangle hidden"></img>
+            <img src={chile} class="box hidden"></img>
+            <img src={tacos2} class="rectangle hidden"></img>
           </div>
         </section>
       </body>
