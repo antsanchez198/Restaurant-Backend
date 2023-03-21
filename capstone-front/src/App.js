@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <>
       <BrowserRouter>
         <NavBar isLogin ={isLogin}/>
         <Routes>
@@ -58,7 +58,7 @@ function App() {
         } />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

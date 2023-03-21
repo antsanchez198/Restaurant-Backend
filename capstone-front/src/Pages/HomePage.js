@@ -24,20 +24,12 @@ export default function HomePage() {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.target.className.includes("rectangle") || entry.target.className.includes("box")) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show")
-          }
-          else {
-            entry.target.classList.remove("show")
-          }
+          entry.target.classList.toggle("show", entry.isIntersecting);
+          if (entry.isIntersecting) { observer.unobserve(entry.target); }
         }
         else {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("slide-show")
-          }
-          else {
-            entry.target.classList.remove("slide-show")
-          }
+          entry.target.classList.toggle("slide-show", entry.isIntersecting);
+          if (entry.isIntersecting) { observer.unobserve(entry.target); }
         }
       })
     })
@@ -48,7 +40,7 @@ export default function HomePage() {
   });
 
   return (
-    <>
+    <div>
       <header>
         <div className="left">
           <h1><strong>Los Mariachis Mexican Restaurant</strong></h1>
@@ -149,6 +141,6 @@ export default function HomePage() {
           </div>
         </section>
       </footer>
-    </>
+    </div>
   );
 }

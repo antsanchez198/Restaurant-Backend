@@ -103,7 +103,7 @@ export default function AccountPage(props) {
 
 
     return (
-        <div className="form-section">
+        <body className="form-section">
             <div className="form-container flex column">
                 <div className='fc-header'>
                     <h1>Login</h1>
@@ -118,6 +118,6 @@ export default function AccountPage(props) {
                 <button className="btn btn-warning" onClick={signIn}>{hasAccount ? "Sign In" : "Register"}</button>
             </div>
             <img src={illustration} alt="My Happy SVG" />
-        </div >
+        </body >
     )
 }
