@@ -104,7 +104,7 @@ export default function AccountPage(props) {
 
     return (
         <body className="form-section">
-            <div className="form-container flex column">
+            <div className="form-container flex column center">
                 <div className='fc-header'>
                     <h1>Login</h1>
                     {hasAccount ? <h6>Don't Have an Account? <a className="registerHere" onClick={() => setHasAccount(!hasAccount)}>Sign Up</a></h6> : <h6>Already have an Account?<a className="registerHere" onClick={() => setHasAccount(!hasAccount)}>Log In</a></h6>}

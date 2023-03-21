@@ -59,8 +59,10 @@ export default function HomePage() {
           <div className="blur">
             <h3>Serving Authentic Mexican Food <span>for over <strong>20 Years</strong></span></h3>
             <div className="container">
-              <p class="hidden">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
-              <p class="hidden">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
+              <div className="row">
+                <p class="hidden col">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
+                <p class="hidden col">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
+              </div>
             </div>
           </div>
         </section>
@@ -135,7 +137,7 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="cc-inner-right">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12110.578729019113!2d-73.9681236!3d40.6377173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b33b370af79%3A0x8081cf4a6211dcb!2sLos%20Mariachis!5e0!3m2!1sen!2sus!4v1678050870583!5m2!1sen!2sus" width="500" height="400" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12110.578729019113!2d-73.9681236!3d40.6377173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b33b370af79%3A0x8081cf4a6211dcb!2sLos%20Mariachis!5e0!3m2!1sen!2sus!4v1678050870583!5m2!1sen!2sus" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
