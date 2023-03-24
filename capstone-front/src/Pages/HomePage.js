@@ -41,22 +41,22 @@ export default function HomePage() {
 
   return (
     <div>
-      <header>
-        <div className="left">
-          <h1><strong>Los Mariachis Mexican Restaurant</strong></h1>
-          <div className="button-container">
-            <Link to="/order"><button className="btn-lg transition">Order Online</button></Link>
-            <Link to="/menu"><button className="btn-lg transition">See the Menu</button></Link>
-          </div>
-        </div>
-        <div className="right">
-          <img class="d-block w-100" src={exterior} alt="Restarant Picture" />
-        </div>
-      </header>
-
       <body>
-        <section className="preview">
-          <div className="blur">
+        <section className="title-section myborder">
+          <div className="left">
+            <h1><strong>Los Mariachis Mexican Restaurant</strong></h1>
+            <div className="button-container flex">
+              <Link to="/order"><button className="btn-lg transition">Order Online</button></Link>
+              <Link to="/menu"><button className="btn-lg transition">See the Menu</button></Link>
+            </div>
+          </div>
+          <div className="right flex center">
+            <img class="d-block w-100" src={exterior} alt="Restarant Picture" />
+          </div>
+        </section>
+
+        <section className="preview myborder">
+          <div className="blur flex center column">
             <h3>Serving Authentic Mexican Food <span>for over <strong>20 Years</strong></span></h3>
             <div className="container">
               <div className="row">
@@ -67,7 +67,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bio-section">
+        <section className="bio-section myborder">
           <div className="bio-section-container">
             <div className="bio-paragraph">
               <h5 className="paragraph"><strong>Live Mariachis</strong></h5>
@@ -97,7 +97,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="images-section">
+        <section className="images-section myborder">
           <h2><strong>Gallery</strong></h2>
           <div className="image-container">
             <img src={tacos} class="rectangle hidden"></img>
@@ -110,7 +110,7 @@ export default function HomePage() {
         </section>
       </body>
 
-      <footer id="contact">
+      <footer id="contact" className="myborder">
         <section className="contact-section" >
           <div className="blur">
             <div className="contact-container">

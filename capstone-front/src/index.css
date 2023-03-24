@@ -46,12 +46,16 @@ code {
 
 .navItems {
   display: block;
-  color: white;
+  color: rgb(222, 222, 222);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   float: left;
   position: relative;
+}
+
+.active {
+  color: white;
 }
 
 .navItems:hover {
