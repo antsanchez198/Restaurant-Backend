@@ -42,7 +42,7 @@ export default function HomePage() {
   return (
     <div>
       <body>
-        <section className="title-section myborder">
+        <section className="title-section myborder center">
           <div className="left">
             <h1><strong>Los Mariachis Mexican Restaurant</strong></h1>
             <div className="button-container flex">
@@ -50,25 +50,23 @@ export default function HomePage() {
               <Link to="/menu"><button className="btn-lg transition">See the Menu</button></Link>
             </div>
           </div>
-          <div className="right flex center">
-            <img class="d-block w-100" src={exterior} alt="Restarant Picture" />
-          </div>
+          <img class="d-block" src={exterior} alt="Restarant Picture" />
         </section>
 
         <section className="preview myborder">
           <div className="blur flex center column">
             <h3>Serving Authentic Mexican Food <span>for over <strong>20 Years</strong></span></h3>
-            <div className="container">
-              <div className="row">
-                <p class="hidden col">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
-                <p class="hidden col">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
+            {/* <div className="container"> */}
+              <div className="para-container flex">
+                <p class="hidden">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
+                <p class="hidden">Lorem ipsum dolor sit amet. Et labore sunt 33 neque voluptate est error internos. Ut rerum tenetur ea repellendus repudiandae id consequatur omnis et atque ullam. Sit omnis accusantium et reprehenderit adipisci ad internos nisi? Ut reprehenderit doloremque eum provident necessitatibus ut delectus possimus qui porro libero eum mollitia error ut laboriosam saepe ea minima dolores?</p>
               </div>
-            </div>
+            {/* </div> */}
           </div>
         </section>
 
         <section className="bio-section myborder">
-          <div className="bio-section-container">
+          <div className="bio-section-container reverse">
             <div className="bio-paragraph">
               <h5 className="paragraph"><strong>Live Mariachis</strong></h5>
               <p>every Friday from 8pm to 11pm</p>
